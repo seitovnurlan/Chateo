@@ -6,5 +6,5 @@ target 'ProjectChateo' do
   use_frameworks!
 
   # Pods for ProjectChateo
-  pod ‘SnapKit’ 
+   pod ‘SnapKit’
 end
