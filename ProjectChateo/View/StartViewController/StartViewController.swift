@@ -48,7 +48,7 @@ class StartViewController: UIViewController {
         button.layer.cornerRadius = 26
         button.layer.borderWidth = 1
 //        button.backgroundColor = UIColor(white: 1, alpha: 0.3)
-        button.addTarget(self, action: #selector(logInTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(startTapped), for: .touchUpInside)
        return button
    } ()
     
@@ -56,6 +56,9 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "backgroundColorView")
+        let negativeSpacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        negativeSpacer.width = -10
+        navigationItem.backBarButtonItem = negativeSpacer
         setupConstraints()
     }
     
@@ -63,8 +66,8 @@ class StartViewController: UIViewController {
         view.addSubview(chatImageView)
         chatImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(130)
-            make.left.equalToSuperview().inset(63)
-//            make.centerX.equalToSuperview()
+//            make.left.equalToSuperview().inset(63)
+            make.centerX.equalToSuperview()
             make.width.equalTo(260)
             make.height.equalTo(271)
         }
@@ -85,6 +88,7 @@ class StartViewController: UIViewController {
 //            make.leading.trailing.equalToSuperview().inset(16)
 //            make.leading.equalToSuperview().inset(16)
             make.centerX.equalToSuperview()
+//            make.leading.trailing.equalToSuperview().inset(30)
             make.width.equalTo(328)
             make.height.equalTo(52)
         }
@@ -100,13 +104,15 @@ class StartViewController: UIViewController {
     }
     
     
-    @objc func logInTapped() {
-        let showLIvc = PhoneEntryViewController()
-        let nc = UINavigationController(rootViewController: showLIvc)
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-           let appDelegate = windowScene.delegate as? SceneDelegate {
-            appDelegate.window?.rootViewController = nc
-        }
+    @objc func startTapped() {
+        let nextViewController = PhoneEntryViewController()
+        navigationController?.pushViewController(nextViewController, animated: true)
+//        let showLIvc = PhoneEntryViewController()
+//        let nc = UINavigationController(rootViewController: showLIvc)
+//        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+//           let appDelegate = windowScene.delegate as? SceneDelegate {
+//            appDelegate.window?.rootViewController = nc
+//        }
     }
 
 }

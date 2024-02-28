@@ -18,10 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
                 
 //        window.rootViewController = MainTabBarController()
+//        window.rootViewController = StartViewController()
     
-        window.rootViewController = StartViewController()
-        
-//        window.rootViewController = LaunchScreenViewController()
+        let startViewController = StartViewController()
+        let navigationController = UINavigationController(rootViewController: startViewController)
+            
+        window.rootViewController = navigationController
+
         
         self.window = window
         window.makeKeyAndVisible()

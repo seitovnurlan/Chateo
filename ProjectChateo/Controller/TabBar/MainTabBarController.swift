@@ -57,7 +57,7 @@ extension MainTabBarController: UITabBarControllerDelegate {
            item.title = (index == selectedIndex) ? "Contacts" : nil
            item.image = (index == selectedIndex) ? UIImage(named: "tabbarellipseblack") : UIImage(named: "contactimage")
        } else if index == 1 {
-           item.title = (index == selectedIndex) ? "\nChats" : nil
+           item.title = (index == selectedIndex) ? "Chats" : nil
            item.image = (index == selectedIndex) ? UIImage(named: "tabbarellipseblack") : UIImage(named: "chatimage")
 //           item.imageInsets = UIEdgeInsets(top: 4, left: 0, bottom: 0, right: 0)
 //           item.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 4)
