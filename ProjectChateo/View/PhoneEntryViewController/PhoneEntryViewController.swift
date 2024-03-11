@@ -110,8 +110,6 @@ class PhoneEntryViewController: UIViewController {
         button.tintColor = UIColor(named: "textcolorwhite")
         button.backgroundColor = UIColor(named: "buttoncolor")
         button.layer.cornerRadius = 26
-        button.layer.borderWidth = 1
-//        button.backgroundColor = UIColor(white: 1, alpha: 0.3)
         button.addTarget(self, action: #selector(continueTapped), for: .touchUpInside)
        return button
    } ()
@@ -257,12 +255,6 @@ extension PhoneEntryViewController: UIPickerViewDataSource, UIPickerViewDelegate
         countryCodeTextField.text = selectedCountryCode
     }
 }
-
-
-
-
-
-   
    
 //    private func setupConstraints() {
 //        flagImageView.snp.makeConstraints { make in

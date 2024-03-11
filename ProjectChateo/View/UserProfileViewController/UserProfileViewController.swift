@@ -80,8 +80,6 @@ class UserProfileViewController: UIViewController {
         button.tintColor = UIColor(named: "textcolorwhite")
         button.backgroundColor = UIColor(named: "buttoncolor")
         button.layer.cornerRadius = 26
-        button.layer.borderWidth = 1
-//        button.backgroundColor = UIColor(white: 1, alpha: 0.3)
         button.addTarget(self, action: #selector(saveTapped), for: .touchUpInside)
        return button
    } ()
@@ -91,10 +89,10 @@ class UserProfileViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "backgroundColorView")
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-
-//        let negativeSpacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-//        negativeSpacer.width = -10
-//        navigationItem.backBarButtonItem = negativeSpacer
+        
+//        let backButton = UIBarButtonItem(title: "Contacts", style: .plain, target: nil, action: nil)
+//        navigationItem.backBarButtonItem = backButton
+       
         setupViews()
         setupConstraints()
     }
@@ -163,14 +161,21 @@ class UserProfileViewController: UIViewController {
     }
     
     @objc func saveTapped() {
-//        let nextViewController = MainTabBarController()
-//        navigationController?.pushViewController(nextViewController, animated: true)
-        let showLIvc = MainTabBarController()
-        let nc = UINavigationController(rootViewController: showLIvc)
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-           let appDelegate = windowScene.delegate as? SceneDelegate {
-            appDelegate.window?.rootViewController = nc
-        }
+        let backButtonFont = UIFont.systemFont(ofSize: 18, weight: .medium)
+            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: backButtonFont], for: .normal)
+            navigationItem.backBarButtonItem = UIBarButtonItem(title: "Chats", style: .plain, target: nil, action: nil)
+//        let backButton = UIBarButtonItem(title: "Contacts", style: .plain, target: nil, action: nil)
+//        navigationItem.backBarButtonItem = backButton
+        let nextViewController = MainTabBarController()
+        navigationController?.setNavigationBarHidden(true, animated: false)
+       
+        navigationController?.pushViewController(nextViewController, animated: true)
+//        let showLIvc = MainTabBarController()
+//        let nc = UINavigationController(rootViewController: showLIvc)
+//        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+//           let appDelegate = windowScene.delegate as? SceneDelegate {
+//            appDelegate.window?.rootViewController = nc
+//        }
     }
 
 }

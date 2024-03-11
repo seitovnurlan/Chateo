@@ -46,8 +46,6 @@ class StartViewController: UIViewController {
         button.tintColor = UIColor(named: "textcolorwhite")
         button.backgroundColor = UIColor(named: "buttoncolor")
         button.layer.cornerRadius = 26
-        button.layer.borderWidth = 1
-//        button.backgroundColor = UIColor(white: 1, alpha: 0.3)
         button.addTarget(self, action: #selector(startTapped), for: .touchUpInside)
        return button
    } ()

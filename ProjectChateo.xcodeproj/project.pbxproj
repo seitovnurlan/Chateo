@@ -20,6 +20,9 @@
 		28BDFE342B8BFE4D001DB69C /* PhoneEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDFE332B8BFE4D001DB69C /* PhoneEntryViewController.swift */; };
 		28BDFE362B8CD9C5001DB69C /* VerificationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDFE352B8CD9C5001DB69C /* VerificationCodeViewController.swift */; };
 		28BDFE382B8E90CA001DB69C /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDFE372B8E90CA001DB69C /* UserProfileViewController.swift */; };
+		28BDFE3B2B9E409A001DB69C /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDFE3A2B9E409A001DB69C /* ContactsTableViewCell.swift */; };
+		28BDFE3D2B9E41A7001DB69C /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDFE3C2B9E41A7001DB69C /* Contacts.swift */; };
+		28BDFE3F2B9E6BDE001DB69C /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDFE3E2B9E6BDE001DB69C /* CustomCollectionViewCell.swift */; };
 		EA3DA3B24FE0602F0D2B3ECE /* Pods_ProjectChateo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F650FE32DF86F8B21B2A966 /* Pods_ProjectChateo.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,9 @@
 		28BDFE332B8BFE4D001DB69C /* PhoneEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEntryViewController.swift; sourceTree = "<group>"; };
 		28BDFE352B8CD9C5001DB69C /* VerificationCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeViewController.swift; sourceTree = "<group>"; };
 		28BDFE372B8E90CA001DB69C /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		28BDFE3A2B9E409A001DB69C /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		28BDFE3C2B9E41A7001DB69C /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		28BDFE3E2B9E6BDE001DB69C /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC13CDBB7BBFDFB93A45F8E4 /* Pods-ProjectChateo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectChateo.debug.xcconfig"; path = "Target Support Files/Pods-ProjectChateo/Pods-ProjectChateo.debug.xcconfig"; sourceTree = "<group>"; };
 		BD7B46DD5284509C4645AC17 /* Pods-ProjectChateo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectChateo.release.xcconfig"; path = "Target Support Files/Pods-ProjectChateo/Pods-ProjectChateo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +115,7 @@
 		28147C6C2B85328A00FB1A65 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				28BDFE3C2B9E41A7001DB69C /* Contacts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,10 +143,11 @@
 		28BDFE252B8A2326001DB69C /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				28BDFE2A2B8A2CE7001DB69C /* SettingsViewController.swift */,
+				28BDFE392B9E405D001DB69C /* Components */,
+				28BDFE262B8A2B3F001DB69C /* MainTabBarController.swift */,
 				28BDFE282B8A2BE2001DB69C /* ContactsViewController.swift */,
 				28147C5B2B85326600FB1A65 /* ChatsViewController.swift */,
-				28BDFE262B8A2B3F001DB69C /* MainTabBarController.swift */,
+				28BDFE2A2B8A2CE7001DB69C /* SettingsViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -181,6 +189,15 @@
 				28BDFE372B8E90CA001DB69C /* UserProfileViewController.swift */,
 			);
 			path = UserProfileViewController;
+			sourceTree = "<group>";
+		};
+		28BDFE392B9E405D001DB69C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				28BDFE3A2B9E409A001DB69C /* ContactsTableViewCell.swift */,
+				28BDFE3E2B9E6BDE001DB69C /* CustomCollectionViewCell.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		744271CABDC12C0D93B11AF3 /* Pods */ = {
@@ -307,13 +324,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28BDFE3B2B9E409A001DB69C /* ContactsTableViewCell.swift in Sources */,
 				28147C5C2B85326600FB1A65 /* ChatsViewController.swift in Sources */,
 				28BDFE382B8E90CA001DB69C /* UserProfileViewController.swift in Sources */,
+				28BDFE3F2B9E6BDE001DB69C /* CustomCollectionViewCell.swift in Sources */,
 				28BDFE322B8BFB3E001DB69C /* StartViewController.swift in Sources */,
 				28147C582B85326600FB1A65 /* AppDelegate.swift in Sources */,
 				28BDFE362B8CD9C5001DB69C /* VerificationCodeViewController.swift in Sources */,
 				28BDFE272B8A2B3F001DB69C /* MainTabBarController.swift in Sources */,
 				28BDFE342B8BFE4D001DB69C /* PhoneEntryViewController.swift in Sources */,
+				28BDFE3D2B9E41A7001DB69C /* Contacts.swift in Sources */,
 				28147C5A2B85326600FB1A65 /* SceneDelegate.swift in Sources */,
 				28BDFE292B8A2BE2001DB69C /* ContactsViewController.swift in Sources */,
 				28BDFE2B2B8A2CE7001DB69C /* SettingsViewController.swift in Sources */,

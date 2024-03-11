@@ -101,6 +101,7 @@ class VerificationCodeViewController: UIViewController, UITextFieldDelegate {
         navigationItem.backBarButtonItem = negativeSpacer
         let backButton = UIBarButtonItem(title: "Your Profile", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backButton
+        navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .medium)], for: .normal)
         setupViews()
         setupConstraints()
         enterCodeOneTextField.becomeFirstResponder()
